@@ -40,5 +40,5 @@ auth = author_name.lower()
 
 site_url = "https://www.quotesandsayings.net/quotes/"+author_name
 
-tweet = f'@{auth}\n\n#{auth} #quotes #quotesandsayings #motivation #inspiration #sayings #quote #quoteoftheday {site_url}-{quote_key}'
-api.update_status(status=tweet)
+tweet = f'-@{auth}\n\n#{auth} #quotes #quotesandsayings #motivation #inspiration #sayings #quote #quoteoftheday {site_url}-{quote_key}'
+a=api.update_status(status=tweet)
