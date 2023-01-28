@@ -5,7 +5,7 @@ name: quotes engagement bot
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: "*/30 * * * 7,3,6" 
+    - cron: "*/30 * * * 6,2,5" 
 jobs:
   build:
     runs-on: ubuntu-latest
