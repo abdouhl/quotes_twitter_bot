@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: quotes en engagement bot
+name: quotes pt engagement bot
 
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: "*/30 * * * 6,3,0" 
+    - cron: "*/30 * * * 2,5" 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,10 +22,10 @@ jobs:
           pip install tweepy python-dotenv deta
       - name: execute py script 
         run: |
-          python engagement.py
+          python engagement_pt.py
         env:
           QUOTES_TWITER_BOT_CONSUMER_KEY: ${{secrets.QUOTES_TWITER_BOT_CONSUMER_KEY}}
           QUOTES_TWITER_BOT_CONSUMER_SECRET: ${{secrets.QUOTES_TWITER_BOT_CONSUMER_SECRET}}
-          QUOTES_TWITER_BOT_ACCESS_TOKEN: ${{secrets.QUOTES_TWITER_BOT_ACCESS_TOKEN}}
-          QUOTES_TWITER_BOT_ACCESS_TOKEN_SECRET: ${{secrets.QUOTES_TWITER_BOT_ACCESS_TOKEN_SECRET}}
+          QUOTES_PT_TWITER_BOT_ACCESS_TOKEN: ${{secrets.QUOTES_PT_TWITER_BOT_ACCESS_TOKEN}}
+          QUOTES_PT_TWITER_BOT_ACCESS_TOKEN_SECRET: ${{secrets.QUOTES_PT_TWITER_BOT_ACCESS_TOKEN_SECRET}}
           DETA_KEY: ${{secrets.DETA_KEY}}
