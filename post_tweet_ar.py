@@ -11,8 +11,8 @@ load_dotenv(join(dirname(__file__), '.env'))
 
 
 twitter_auth_keys = {
-    "consumer_key"        : os.environ.get("QUOTES_TWITER_BOT_CONSUMER_KEY__"),
-    "consumer_secret"     : os.environ.get("QUOTES_TWITER_BOT_CONSUMER_SECRET__"),
+    "consumer_key"        : os.environ.get("QUOTES_TWITER_BOT_CONSUMER_KEY_1"),
+    "consumer_secret"     : os.environ.get("QUOTES_TWITER_BOT_CONSUMER_SECRET_1"),
     "access_token"        : os.environ.get("QUOTES_AR_TWITER_BOT_ACCESS_TOKEN"),
     "access_token_secret" : os.environ.get("QUOTES_AR_TWITER_BOT_ACCESS_TOKEN_SECRET")
 }
