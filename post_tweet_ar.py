@@ -31,7 +31,7 @@ api = tweepy.API(auth)
 
 
 supabase: Client = create_client(os.environ.get("SUPABASE_URL"),os.environ.get("SUPABASE_KEY"))
-quote_kkey = random.choice(range(0,1100))
+quote_kkey = random.choice(range(0,1360))
 data =supabase.table("quotes").select('*').eq('lang','ar').range(quote_kkey,quote_kkey+1).execute().data
 title = data[0]['text']
 author_name = data[0]['username']
